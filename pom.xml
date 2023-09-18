@@ -8,11 +8,11 @@
 		<version>3.1.3</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>org.gnp</groupId>
-	<artifactId>intedoc</artifactId>
+	<groupId>org.teamproject</groupId>
+	<artifactId>book</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>intedoc</name>
-	<description>Demo project for Spring Boot</description>
+	<name>book</name>
+	<description>project</description>
 	<properties>
 		<java.version>20</java.version>
 	</properties>

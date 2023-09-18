@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org"
-      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
-      layout:decorate="~{front/layouts/main}">
+    xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+    layout:decorate="~{front/layouts/main}">
 <main layout:fragment="content">
     <form name="frmJoin" method="POST" th:action="@{/member/join}" autocomplete="off" th:object="${joinForm}">
         <div class="error global" th:each="err : ${#fields.globalErrors()}" th:text="${err}"></div>
@@ -43,7 +43,7 @@
             </li>
             <li>
                 <div th:text="#{member.term}"></div>
-                <div>회원 약관...</div>
+                <div th:utext="${@utils.getConfig('joinTerms')}"></div>
                 <input type="checkbox" name="agree" th:field="*{agree}" id="agree">
                 <label for="agree" th:text="#{member.term.agree}"></label>
                 <div class="error" th:each="err : ${#fields.errors('agree')}" th:text="${err}"></div>
